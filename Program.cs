@@ -6,7 +6,19 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var c = new Client();
+            c.Finished += () => Console.WriteLine("Finished.");
+            c.DoWork();
+        }
+    }
+
+    public class Client
+    {
+        public event Action Finished;
+        public void DoWork()
+        {
+            Console.WriteLine("Doing work.");
+            Finished();
         }
     }
 }
