@@ -18,7 +18,7 @@ namespace ConsoleApplication
         public void DoWork()
         {
             Console.WriteLine("Doing work.");
-            Finished();
+            Finished?.Invoke();
         }
     }
 }
