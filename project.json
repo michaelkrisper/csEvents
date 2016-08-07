@@ -4,7 +4,8 @@
     "debugType": "portable",
     "emitEntryPoint": true
   },
-  "dependencies": {},
+  "runtimes": { "win": { } },
+  "dependencies": { },
   "frameworks": {
     "netcoreapp1.0": {
       "dependencies": {
